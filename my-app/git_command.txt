@@ -1,0 +1,30 @@
+* Kết nối máy tính hiện tại với git server
+
+- Khai báo tên username
+git config --global user.name "Hai Anh":  Khai báo username
+
+- Khai bái email
+git config --global user.email nguyenhai.anh6599@gmail.com
+
+* Git command
+
+- Lấy project từ trên Git server về Local
+git clone https://github.com/HaiAnhNguyen6599/demo-react.git
+
+- Check status hiện tại của thư mục
+git status
+
+- Add file mới vào thư mục tạm (Staging area) trước khi commit. Đánh dấu những file sẽ được lưu lại khi thực hiện git commit
+git add . (tất cả các file kể cả đã modify, tạo mới hoặc xóa). 
+
+- Lưu các thay đổi đã được thêm vào Staging area -> repo (kèm theo message thay đổi)
+git commit -m "Đã add"
+
+
+- Đẩy các commit -> remote (lên git web)
+git push 
+git push origin main : Đẩy lên nhánh main
+
+- Lấy các thay đổi từ remote -> local 
+git pull
+git pull origin main: Lấy từ main -> local
