@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+/* src/App.css */
+h1 {
+  color: blue;
+}
+
+p {
+  font-size: 18px;
+}
