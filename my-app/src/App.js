@@ -1,12 +1,11 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Counter from "./components/Counter";
+import SumNumber from "./components/SumNumber";
 
 function App() {
   return (
     <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Ứng dụng đếm số lần nhấn</h1>
-      <Counter />
+      <h1> Adding Two Numbers</h1>
+      <SumNumber />
     </div>
   );
 }
