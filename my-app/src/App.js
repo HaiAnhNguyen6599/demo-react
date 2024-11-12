@@ -1,7 +1,7 @@
 import "./App.css";
 import Rectangle from "./components/Rectangle";
 import SumNumber from "./components/SumNumber";
-import SalaryCalculate from "./components/SalaryCalculate";
+import SalaryCalculate1 from "./components/SalaryCalculate1";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Rectangle />
       <br></br>  */}
       <h2>Salary</h2>
-      <SalaryCalculate />
+      <SalaryCalculate1 />
     </div>
   );
 }
