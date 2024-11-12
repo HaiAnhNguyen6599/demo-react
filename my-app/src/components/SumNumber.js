@@ -13,7 +13,7 @@ function SumNumber() {
 
   //useEffect sẽ cập nhập sumResult() mỗi khi được thay đổi
   // Tự động hiện kêt quả sumReact
-  // useEffect(() => sumResult(), [numA, numB]);
+  useEffect(() => sumResult());
 
   // (e) arrow function nhận sự kiện e và cập nhập giá trị numA với giá trị hiện tại ở input (e.target.value).  e sẽ được dùng để lấy giá trị input hiện tại
   // Sau đó setNumA sẽ được sử dụng để cập nhật trạng thái ở input cho numA.
