@@ -4,6 +4,7 @@ import SumNumber from "./components/SumNumber";
 import SalaryCalculate1 from "./components/SalaryCalculate1";
 import CRUDManage from "./components/CRUDManage";
 import CallAPI from "./components/CallAPI";
+import Timer from "./components/Timer";
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
       <SalaryCalculate1 /> */}
       {/* <CRUDManage/> */}
 
-      <CallAPI/>
-    
+      {/* <CallAPI/> */}
+
+      <Timer />
     </div>
   );
 }
