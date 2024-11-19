@@ -16,7 +16,7 @@ function App() {
       <br></br>  */}
       {/* <h2>Salary</h2>
       <SalaryCalculate1 /> */}
-      {/* <CRUDManage/> */}
+      <CRUDManage />
 
       {/* <CallAPI/> */}
 
