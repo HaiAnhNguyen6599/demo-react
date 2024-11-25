@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 /* input {
   padding: 8px 12px;
   font-size: 16px;
@@ -19,16 +19,16 @@ button {
 } */
 
 /* Căn chỉnh tổng thể của ứng dụng */
-body {
+/* body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
   color: #333;
   margin: 0;
   padding: 0;
-}
+} */
 
 /* Căn giữa toàn bộ nội dung */
-.container {
+/* .container {
   display: inline-block;
   max-width: 800px;
   margin: 50px auto;
@@ -39,14 +39,14 @@ body {
 }
 
 /* Tiêu đề chính */
-h3 {
+/* h3 {
   text-align: center;
   color: #4caf50;
   margin-bottom: 20px;
-}
+} */
 
 /* Các trường nhập liệu (input) */
-input[type="number"] {
+/* input[type="number"] {
   width: 100%;
   padding: 10px;
   margin: 8px 0;
@@ -59,7 +59,7 @@ input[type="number"] {
 input[type="number"]:focus {
   border-color: #4caf50;
   outline: none;
-}
+} */
 
 /* Nút tính lương */
 /* button {
@@ -74,18 +74,18 @@ input[type="number"]:focus {
   width: 100%;
   margin-top: 20px;
   /* transition: background-color 0.3s ease; */
-/* } */ 
+/* } */
 
 /* button:hover {
   background-color: #45a049;
 } */
 
 /* Hiển thị thông báo lỗi */
-p {
+/* p {
   font-size: 18px;
   text-align: center;
   color: #ff5722;
-}
+} */
 
 /* Kết quả tính toán */
 /* .result {
@@ -106,7 +106,7 @@ p {
 /* label {
   font-size: 18px;
   margin-bottom: 10px; */
-  /* display: block; */
+/* display: block; */
 /* } */
 
 /* Bố cục tổng thể các ô nhập liệu cho giờ làm việc */

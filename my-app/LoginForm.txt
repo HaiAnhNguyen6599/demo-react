@@ -104,3 +104,76 @@ const styles = {
 };
 
 export default LoginForm;
+
+------------------------------------------------------------------------------
+
+import React, { useState } from "react";
+
+const LoginForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const correctName = "anh";
+  const correctEmail = "hai@gmail.com";
+  const correctPassword = "123";
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    if (
+      name === correctName &&
+      email === correctEmail &&
+      password === correctPassword
+    ) {
+      setErrorMessage("");
+      setIsLoggedIn(true);
+    } else {
+      setErrorMessage("Invalid name, email or password");
+      setIsLoggedIn(false);
+    }
+  };
+  return (
+    <div>
+      <h2>Login Form</h2>
+      {isLoggedIn ? (
+        <h3>Welcome {name}</h3>
+      ) : (
+        <form onSubmit={handleLogin}>
+          <label>Name</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          ></input>
+
+          <br></br>
+          <label>Email</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          ></input>
+
+          <br></br>
+
+          <label>Password</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          ></input>
+
+          <br></br>
+
+          <button type="submite">Login</button>
+          {errorMessage && <div>{errorMessage}</div>}
+        </form>
+      )}
+    </div>
+  );
+};
+
+export default LoginForm;

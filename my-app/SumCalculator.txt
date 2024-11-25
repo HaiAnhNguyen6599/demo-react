@@ -79,3 +79,39 @@ const styles = {
 };
 
 export default SumCalculator;
+
+---------------------------------------------------------------------------------------------------
+
+import React, { useState } from "react";
+
+const SumCalculator = () => {
+  const [numA, setNumA] = useState("");
+  const [numB, setNumB] = useState("");
+  const [result, setResult] = useState(null);
+
+  const calculateSum = (e) => {
+    e.preventDefault();
+    const sum = parseFloat(numA || 0) + parseFloat(numB || 0);
+    setResult(sum);
+  };
+
+  return (
+    <div>
+      <input
+        type="number"
+        value={numA}
+        onChange={(e) => setNumA(e.target.value)}
+      ></input>
+      +
+      <input
+        type="number"
+        value={numB}
+        onChange={(e) => setNumB(e.target.value)}
+      ></input>
+      <button onClick={calculateSum}>Calculate</button>
+      {result !== null && <div>Result: {result}</div>}
+    </div>
+  );
+};
+
+export default SumCalculator;

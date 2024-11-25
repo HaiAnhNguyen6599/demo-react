@@ -65,3 +65,51 @@ const styles = {
 };
 
 export default SearchFilter;
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+import React, { useState } from "react";
+
+const SearchFilter = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const items = [
+    "Apple",
+    "Banana",
+    "Cherry",
+    "Date",
+    "Elderberry",
+    "Fig",
+    "Grape",
+  ];
+
+  // Sử dụng function .filter() của mảng để lọc ra mục phù hợp với từ khóa tìm kiếm ở `searchTerm`
+  // 1. Đi qua từng `item` trong array `items`
+  // 2. `item` sẽ được dùng hàm lowerCasee để viết thường
+  // 3. `item` viết thường sẽ được kiểm tra xem có được includes trong `searchTerm` không
+  const filteredItems = items.filter((item) =>
+    item.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
+  );
+
+  return (
+    <div>
+      <h2>Search Filter</h2>
+      <input
+        type="text"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        placeholder="Search Item..."
+      ></input>
+      <ul>
+        {filteredItems.length > 0 ? (
+          filteredItems.map((item, index) => <li key={index}>{item}</li>)
+        ) : (
+          <li>No items found</li>
+        )}
+      </ul>
+    </div>
+  );
+};
+
+export default SearchFilter;
