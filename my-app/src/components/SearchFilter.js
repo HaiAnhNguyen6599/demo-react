@@ -85,7 +85,7 @@ const SearchFilter = () => {
   // 2. `item` sẽ được dùng hàm lowerCasee để viết thường
   // 3. `item` viết thường sẽ được kiểm tra xem có được includes trong `searchTerm` không
   const filteredItems = items.filter((item) =>
-    item.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
+    item.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
