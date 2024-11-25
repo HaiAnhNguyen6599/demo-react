@@ -5,6 +5,9 @@ import SalaryCalculate1 from "./components/SalaryCalculate1";
 import CRUDManage from "./components/CRUDManage";
 import CallAPI from "./components/CallAPI";
 import Timer from "./components/Timer";
+import LoginForm from "./components/LoginForm";
+import SumCalculator from "./components/SumCalculator";
+import SearchFilter from "./components/SearchFilter";
 
 function App() {
   return (
@@ -16,11 +19,19 @@ function App() {
       <br></br>  */}
       {/* <h2>Salary</h2>
       <SalaryCalculate1 /> */}
-      <CRUDManage />
+      {/* <CRUDManage /> */}
 
       {/* <CallAPI/> */}
 
-      <Timer />
+      {/* <Timer /> */}
+
+      {/* For Examination */}
+
+      <SearchFilter />
+
+      <SumCalculator />
+
+      <LoginForm />
     </div>
   );
 }
