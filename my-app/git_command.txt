@@ -28,3 +28,38 @@ git push origin main : Đẩy lên nhánh main
 - Lấy các thay đổi từ remote -> local 
 git pull
 git pull origin main: Lấy từ main -> local
+
+
+* Fix lỗi khi `npm start error`
+  npm : File C:\Program Files\nodejs\npm.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies 
+  at https:/go.microsoft.com/fwlink/?LinkID=135170. 
+  At line:1 char:1 + npm -v + ~~~ + CategoryInfo : SecurityError: (:) [], PSSecurityException + FullyQualifiedErrorId : UnauthorizedAccess PS C:\Users\Admin\Desktop\react>   
+
+  Lỗi này xảy ra do chính sách bảo mật Execution Policy trên PowerShell, ngăn không cho chạy các tập lệnh (scripts) như npm.ps1. Đây là cách khắc phục lỗi này:  
+	+ Chạy cmd với admin:	
+	Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+	
+* Settting Prettier Default
+2. Cấu hình format tự động khi lưu
+	i.Mở Settings:
+		Nhấn Ctrl + , hoặc vào File > Preferences > Settings.	
+
+	ii. Kích hoạt Format On Save:
+		Gõ [format on save] vào thanh tìm kiếm.
+		Tích chọn Editor: Format On Save.
+
+	iii.Đặt Prettier làm formatter mặc định:
+
+		Gõ default formatter vào thanh tìm kiếm.
+		Trong Editor: Default Formatter, chọn esbenp.prettier-vscode.
+		
+3. Cấu hình cụ thể trong settings.json
+Bạn cũng có thể chỉnh sửa trực tiếp tệp cấu hình của Visual Studio Code:
+
+	i. Nhấn Ctrl + Shift + P, gõ Preferences: Open Settings (JSON).
+	ii. Thêm đoạn sau vào tệp settings.json:
+		{
+		  "editor.defaultFormatter": "esbenp.prettier-vscode",
+		  "editor.formatOnSave": true
+		}
