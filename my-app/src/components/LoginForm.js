@@ -120,53 +120,48 @@ const LoginForm = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-
     if (
       name === correctName &&
       email === correctEmail &&
       password === correctPassword
     ) {
-      setErrorMessage("");
       setIsLoggedIn(true);
+      setErrorMessage("");
     } else {
-      setErrorMessage("Invalid name, email or password");
       setIsLoggedIn(false);
+      setErrorMessage("Invalid name, email or passowrd");
     }
   };
+
   return (
     <div>
       <h2>Login Form</h2>
       {isLoggedIn ? (
-        <h3>Welcome {name}</h3>
+        <div>Welcome, {name}</div>
       ) : (
         <form onSubmit={handleLogin}>
-          <label>Name</label>
           <input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            placeholder="Enter your name"
           ></input>
-
           <br></br>
-          <label>Email</label>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email"
           ></input>
-
           <br></br>
-
-          <label>Password</label>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter your password"
           ></input>
-
+          <button type="submit">Login</button>
           <br></br>
-
-          <button type="submite">Login</button>
           {errorMessage && <div>{errorMessage}</div>}
         </form>
       )}

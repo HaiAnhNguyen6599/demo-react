@@ -85,33 +85,33 @@
 import React, { useState } from "react";
 
 const SumCalculator = () => {
-  const [numA, setNumA] = useState("");
-  const [numB, setNumB] = useState("");
+  const [num1, setNum1] = useState("");
+  const [num2, setNum2] = useState("");
   const [result, setResult] = useState("");
 
   const calculateSum = (e) => {
     e.preventDefault();
-    const sum = parseFloat(numA || 0) + parseFloat(numB || 0);
+    const sum = parseFloat(num1 || 0) + parseFloat(num2 || 0);
     setResult(sum);
   };
 
   return (
     <div>
-      <h2>Sum Calculator</h2>
+      <h2>SumCalculator</h2>
       <input
         type="number"
-        value={numA}
-        onChange={(e) => setNumA(e.target.value)}
+        value={num1}
+        onChange={(e) => setNum1(e.target.value)}
+        placeholder="Enter first number"
       ></input>
       +
       <input
         type="number"
-        value={numB}
-        onChange={(e) => setNumB(e.target.value)}
+        value={num2}
+        onChange={(e) => setNum2(e.target.value)}
+        placeholder="Enter second number"
       ></input>
-      <button type="submit" onClick={calculateSum}>
-        Calculate
-      </button>
+      <button onClick={calculateSum}>Calculate</button>
       {result !== null && <div>Result: {result}</div>}
     </div>
   );
